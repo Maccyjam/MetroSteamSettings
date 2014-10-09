@@ -279,7 +279,7 @@ Class MainWindow
             _uninstallDim = """GameItem_Uninstalled GGPlaceholderBG""{alpha 89.25} ""GameItem_Uninstalled GamesGridImage""{alpha 89.25}"
         End If
 
-        Dim fileContents As String = """custom.styles""{colors{Focus=""" + themeColor + " 255"" basefont=" + outFont + "}" + "styles{""CSteamRootDialog""{bgcolor=ClientBG render_bg{ 0=""fill( x0, y0, x1, y1, ClientBG )""" + decalStyle + " 98=""fill( x0, y0, x1, y0+40, FrameBorder)"" 99=""fill( x0, y0, x1, y0+39, Header_Dark )""}}" + _uninstallIndicator + " " + _uninstallDim + "}}"
+        Dim fileContents As String = """custom.styles""{colors{Focus=""" + themeColor + " 255"" basefont=" + outFont + "}" + "styles{""CSteamRootDialog""{bgcolor=ClientBG render_bg{ 0=""fill( x0, y0, x1, y1, ClientBG )""" + decalStyle + " 98=""fill( x0, y0, x1, y0+40, FrameBorder)"" 99=""fill( x0, y0, x1, y0+39, Header_Dark )""}}" + _uninstallIndicator + " " + _uninstallDim + """CGamesListPanel""{font-size=" + DirectCast(fontSize.SelectedItem, ComboBoxItem).Content.ToString() + "} }}"
         Try
             If File.Exists(skinPath + "custom.styles") = True Then
                 Dim file As New StreamWriter(skinPath + "custom.styles")
